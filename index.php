@@ -1,7 +1,8 @@
 <?php
 
-include("config.php");
+include "config.php";
 $c1 = new Config();
+$c1->connect();
 
 $btn_set = isset($_POST["button"]);
 
