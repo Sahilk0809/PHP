@@ -14,21 +14,15 @@ class Config
         $this->connection = mysqli_connect($this->host, $this->user, $this->password, $this->database);
     }
 
-    public function __construct()
+    public function __constructor()
     {
         $this->connect();
     }
 
     public function insertData($name, $age, $contact, $course)
     {
-        $query = "INSERT INTO students (name, age, contact, course) VALUES ($name, $age, $contact, $course)";
-        $res = mysqli_query($this->connection, $query);
-
-        if($res){
-            echo "Insertion Success!";
-        } else{
-            echo "Failed!";
-        }
+        $query = "INSERT INTO students (name, age, contact, course) VALUES ('$name', '$age', '$contact', '$course')";
+        mysqli_query($this->connection, $query);
     }
 }
 
