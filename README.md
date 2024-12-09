@@ -1,7 +1,6 @@
 # PHP
 
 ## Description
-
 ## Student Registration Form in PHP
 This project implements a simple student registration system with PHP and MySQL. Users fill out a form to input student details like name, age, contact, and course. These details are stored in a MySQL database.
 
