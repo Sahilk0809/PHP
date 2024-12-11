@@ -1,22 +1,28 @@
 # PHP
-
 ## Description
-## Student Registration Form in PHP
-This project implements a simple student registration system with PHP and MySQL. Users fill out a form to input student details like name, age, contact, and course. These details are stored in a MySQL database.
+## Student Registration and Management Form
+This project is a Student Registration and Management System built with PHP, MySQL, and Bootstrap. The application allows users to register, view, update, and delete student information through an intuitive and responsive user interface.
 
-## Key Features
-
-## Database Connection:
-- Managed by the Config class (config.php), which connects to the student database using MySQLi.
-
-## Form Submission:
-- The form collects user inputs and submits them via POST to the PHP script.
-- On submission, the insertData method in the Config class adds the data to the students table.
-
-## Code Highlights:
-- The Config class handles database connectivity and query execution.
-- HTML form ensures user-friendly input and uses CSS for styling.
-- This project is a beginner-friendly example of PHP and MySQL integration for managing basic CRUD operations.
+## Features
+- **Student Registration**: Users can register students by entering their details (Name, Age, Contact Number, and Course).
+- **Validation**: The form includes robust client-side and server-side validation to ensure data accuracy:
+All fields are mandatory.
+Name must consist of at least two words.
+Age must be between 1 and 100.
+Contact number must be exactly 10 digits.
+- **Update Functionality**: Registered student details can be updated through a dedicated update form.
+- **Delete Functionality**: Users can delete student records.
+- **Dynamic Table**: All registered students are displayed in a responsive table with action buttons for updating and deleting records.
+## Technologies Used
+- **Frontend**:
+HTML5 & CSS3 for structure and styling.
+Bootstrap 5 for responsiveness and styling.
+JavaScript for user interactions.
+- **Backend**:
+PHP for server-side processing.
+MySQL for database management.
+Styling:
+A clean and modern user interface with animations and gradients.
 
 <!--<img src="https://github.com/user-attachments/assets/0b27d5a1-0dea-4d44-add6-02e2712db11e" width = 60%>
 <img src="https://github.com/user-attachments/assets/0b27d5a1-0dea-4d44-add6-02e2712db11e" width = 60%>-->
