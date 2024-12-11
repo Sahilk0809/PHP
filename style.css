@@ -1,69 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e90ff, #6a5acd);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
+    background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+    font-family: 'Arial', sans-serif;
 }
 
 .form-container {
-    background: #fff;
-    color: #333;
-    padding: 20px 40px;
-    border-radius: 8px;
+    background: white;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+    padding: 20px;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-h1 {
+.form-container h1 {
     font-size: 24px;
+    font-weight: bold;
+    text-align: center;
     margin-bottom: 20px;
-    color: #333;
 }
 
-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+.input-group input {
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-form input:focus {
-    border-color: #1e90ff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
-}
-
-form button {
-    background: #1e90ff;
-    color: #fff;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
     width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+    margin-bottom: 15px;
 }
 
-form button:hover {
-    background: #4682b4;
+.form-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
 }
 
-form button:active {
-    background: #5a9bd6;
+.form-container button:hover {
+    background: #0056b3;
 }
 
-@media (max-width: 400px) {
-    .form-container {
-        width: 90%;
-        padding: 20px;
+.students-container {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.students-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table tbody tr {
+    transition: transform 0.3s;
+}
+
+.table tbody tr:hover {
+    transform: scale(1.02);
+}
+
+.table tbody td button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.table tbody td .btn-update {
+    background: #28a745;
+}
+
+.table tbody td .btn-update:hover {
+    background: #218838;
+}
+
+.table tbody td .btn-delete {
+    background: #dc3545;
+}
+
+.table tbody td .btn-delete:hover {
+    background: #c82333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
