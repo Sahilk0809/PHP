@@ -39,7 +39,6 @@ if (isset($_POST['update'])) {
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,38 +46,46 @@ if (isset($_POST['update'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Form</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <style>
         body {
-            background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+            background: #f8f9fa;
             font-family: 'Arial', sans-serif;
         }
 
         .form-container {
             background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: 40px;
-            animation: fadeIn 1s ease-in-out;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 0.8s ease-in-out;
         }
 
         .form-container h1 {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 600;
             text-align: center;
             margin-bottom: 20px;
+            color: #333;
         }
 
-        .input-group input {
+        .form-container .input-group input {
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             padding: 10px;
             width: 100%;
             margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .form-container .input-group input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
 
         .form-container button {
@@ -88,6 +95,8 @@ if (isset($_POST['update'])) {
             padding: 10px 20px;
             border-radius: 5px;
             width: 100%;
+            font-size: 16px;
+            font-weight: 500;
             transition: background-color 0.3s;
         }
 
@@ -96,16 +105,16 @@ if (isset($_POST['update'])) {
         }
 
         .error-message {
-            color: red;
+            color: #d9534f;
             font-size: 14px;
-            margin-bottom: 15px;
             text-align: center;
+            margin-bottom: 15px;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(-10px);
             }
 
             to {
@@ -117,10 +126,8 @@ if (isset($_POST['update'])) {
 </head>
 
 <body>
-
-    <div class="container">
-        <!-- Top Section: Update Form -->
-        <div class="form-container mx-auto col-md-6">
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="form-container">
             <h1>Update Student Information</h1>
             <?php if (!empty($error_message)) { ?>
                 <div class="error-message"> <?php echo $error_message; ?> </div>

@@ -22,7 +22,8 @@ class Config
     public function insertData($name, $age, $contact, $course)
     {
         $query = "INSERT INTO students (name, age, contact, course) VALUES ('$name', '$age', '$contact', '$course')";
-        mysqli_query($this->connection, $query);
+        $res = mysqli_query($this->connection, $query);
+        return $res;
     }
 
     public function readData(){
