@@ -34,7 +34,8 @@ class Config
 
     public function updateData($id, $name, $age, $contact, $course){
         $query = "UPDATE $this->tableName SET name = '$name', age = $age, contact = $contact, course = '$course' WHERE id = $id";
-        return $res = mysqli_query($this->connection, $query);
+        $res = mysqli_query($this->connection, $query);
+        return $res;
     }
 
     public function deletedata($id){
