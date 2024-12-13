@@ -1,4 +1,5 @@
 # PHP
+
 ## Description
 ## Student Registration and Management Form
 This project is a Student Registration and Management System built with PHP, MySQL, and Bootstrap. The application allows users to register, view, update, and delete student information through an intuitive and responsive user interface.
