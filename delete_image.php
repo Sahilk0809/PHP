@@ -22,9 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
         if ($res) {
             $arr['msg'] = "Image deleted successfully!";
         } else {
+            http_response_code(400);
             $arr["msg"] = "Images not deleted!";
         }
     } else {
+        http_response_code(400);
         $arr["msg"] = "Images not deleted from server!";
     }
 
@@ -35,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     //     $arr['error'] = 'Failed to add image';
     // }
 } else {
+    http_response_code(400);
     $arr['error'] = 'Only DELETE method is allowed';
 }
 

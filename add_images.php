@@ -22,12 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($res) {
             $arr['msg'] = 'Image added successfully!';
         } else {
+            http_response_code(400);
             $arr['error'] = 'Failed to add image';
         }
     } else {
+        http_response_code(400);
         $arr['error'] = 'Images not uploaded!';
     }
 } else {
+    http_response_code(400);
     $arr['error'] = 'Only POST method is allowed';
 }
 
