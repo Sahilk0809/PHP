@@ -35,8 +35,7 @@ A clean and modern user interface with animations and gradients.
 
 https://github.com/user-attachments/assets/297c8fea-5e7d-4998-9484-ed3ac1f745c4
 
-https://github.com/user-attachments/assets/ce9a
+https://github.com/user-attachments/assets/9403be16-100d-4b44-ad24-f6c3db4017dc
 
 https://github.com/user-attachments/assets/b518879c-efb0-4431-85e5-a1a333e9acf0
 
-https://github.com/user-attachments/assets/ea9d5a5b-33f9-4d31-9356-30a7f7ba8cd5
